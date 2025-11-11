@@ -52,6 +52,13 @@ def display_header():
 
 display_header()
 
+def display_menu():
+    print("Record new loan")
+    print("View all loans")
+    print("Exit")
+
+display_menu()
+
 # -------------------------------------------
 # SWAP COMPUTERS
 # -------------------------------------------
@@ -82,7 +89,14 @@ print("-------------------------------------------\n"
 # Test it by calling: display_loan("1984", "George Orwell", "Sarah Smith")
 #
 # Write your code below:
+def display_loan(title, author, borrower):
+    print("--- Loan Record ---")
+    print(f"Title: {title}")
+    print(f"Author: {author}")
+    print(f"Borrower: {borrower}")
+    "-----------------------------"
 
+display_loan(1984, "George Orwell", "Sarah Smith")
 
 
 
