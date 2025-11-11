@@ -134,9 +134,23 @@ print("-------------------------------------------\n"
 # Test by calling all four functions, storing results, and printing the dictionary.
 #
 # Write your code below:
+def get_book_title():
+    title = input("Enter book title:")
+    return title
 
+def get_book_author():
+    author = input("Enter book author:")
+    return author
 
+def get_borrower_name():
+    borrower = input("Enter borrower's name:")
+    return borrower
 
+# def create_loan_record():
+#     loan_record = {title, author, borrower}
+#     return loan_record
+
+# print (loan_record)    
 
 # -------------------------------------------
 # SWAP COMPUTERS
