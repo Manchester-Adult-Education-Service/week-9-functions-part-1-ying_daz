@@ -5,9 +5,9 @@
 # You'll learn about FUNCTIONS - reusable blocks of code.
 #
 # Basic function:
-# def greet():
-#     print("Hello!")
-#
+def greet():
+    print("Hello!")
+greet()
 # Function with parameters:
 # def greet(name):
 #     print(f"Hello, {name}!")
@@ -46,9 +46,11 @@ print("-------------------------------------------\n"
 # 3. Call both functions to test them.
 #
 # Write your code below:
+def display_header():
+    print("=== LIBRARY BOOK LOAN SYSTEM ===")
+    print("Manchester Central Library")
 
-
-
+display_header()
 
 # -------------------------------------------
 # SWAP COMPUTERS
