@@ -5,9 +5,9 @@
 # You'll learn about FUNCTIONS - reusable blocks of code.
 #
 # Basic function:
-def greet():
-    print("Hello!")
-greet()
+# def greet():
+#     print("Hello!")
+# greet()
 # Function with parameters:
 # def greet(name):
 #     print(f"Hello, {name}!")
@@ -135,22 +135,29 @@ print("-------------------------------------------\n"
 #
 # Write your code below:
 def get_book_title():
-    title = input("Enter book title:")
+    title = input("Enter book title: ")
     return title
 
 def get_book_author():
-    author = input("Enter book author:")
+    author = input("Enter book author: ")
     return author
 
 def get_borrower_name():
-    borrower = input("Enter borrower's name:")
+    borrower = input("Enter borrower's name: ")
     return borrower
 
-# def create_loan_record():
-#     loan_record = {title, author, borrower}
-#     return loan_record
+def create_loan_record(title, author, borrower):
+    loan_record = {"title":title, "author":author, "borrower":borrower}
+    return loan_record
 
-# print (loan_record)    
+title = get_book_title()
+author = get_book_author()
+borrower = get_borrower_name()
+loan_record = create_loan_record(title, author, borrower)
+# Without 'calling' the inputs and the created dictionary the program doesn't know where to get the
+# information for the print command on line 159 from!
+
+# print(loan_record)   
 
 # -------------------------------------------
 # SWAP COMPUTERS
@@ -190,6 +197,28 @@ print("-------------------------------------------\n"
 # Test by calling record_new_loan() twice, then view_all_loans().
 #
 # Write your code below:
+loan_records = []
+def record_new_loan():
+    title = get_book_title()
+    author = get_book_author()
+    borrower = get_borrower_name()
+    loan = create_loan_record (title, author, borrower)
+    loan_records.append(loan)
+    print("Loan recorded successfully!")
+    print(f"Total loans: {len(loan_records)}")
+def view_all_loans():
+    print("=== ALL LOAN RECORDS ===")
+    if loan_records == 0:
+        print("No loans recorded yet.")
+    else:
+        for loan in loan_records:
+            display_loan(loan["title"], loan["author"], loan["borrower"])
+    print(f"Total loans: {len(loan_records)}")
+
+
+
+
+view_all_loans
 
 
 
